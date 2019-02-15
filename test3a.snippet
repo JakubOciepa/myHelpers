@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+            <Title>3a Test Method</Title>
+            <Shortcut>test3a</Shortcut>
+            <Description>Code snippet for a test method</Description>
+            <Author>Jakub Ociepa</Author>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>method</ID>
+                    <ToolTip>Replace with the name of the test method</ToolTip>
+                    <Default>method</Default>
+                </Literal>
+                <Literal>
+                    <ID>given</ID>
+                    <ToolTip>Describes the state before begin behavior.</ToolTip>
+                    <Default>given</Default>
+                </Literal>
+                <Literal>
+                    <ID>when</ID>
+                    <ToolTip>Specifying behavior</ToolTip>
+                    <Default>when</Default>
+                </Literal>
+                <Literal>
+                    <ID>then</ID>
+                    <ToolTip>Expected changes</ToolTip>
+                    <Default>then</Default>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>test</ID>
+                    <Default>Test</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[[$test$]
+      public void $method$_$given$_$when$_$then$()
+      {
+      //arrange
+
+      //act
+
+      //assert
+      $end$
+      }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
