@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+            <Title>Class with regions creator</Title>
+            <Shortcut>regcls</Shortcut>
+            <Description>Create class with ordered regions</Description>
+            <Author>Jakub Ociepa</Author>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>access</ID>
+                    <ToolTip>Replace with the access property of the class</ToolTip>
+                    <Default>method</Default>
+                </Literal>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>Replace with name of the class.</ToolTip>
+                    <Default>given</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[
+      $access$ class $name$
+      {
+
+#region Fields
+      $end$
+      #endregion //Fields
+
+#region Constructors
+      #endregion //Constructors
+
+#region Properties
+      #endregion //Properties
+
+#region Methods
+#region Commands
+      #endregion //Commands
+
+#region Queries
+      #endregion //Queries
+
+#endregion //Methods
+      }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
