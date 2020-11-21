@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+            <Title>BindableProperty</Title>
+            <Shortcut>bprop</Shortcut>
+            <Description>Creates BindableProperty with its property.</Description>
+            <Author>Jakub Ociepa</Author>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>Name of the property</ToolTip>
+                    <Default>Name</Default>
+                </Literal>
+                <Literal>
+                    <ID>type</ID>
+                    <ToolTip>Type of the property.</ToolTip>
+                    <Default>Type</Default>
+                </Literal>
+                <Literal>
+                    <ID>classname</ID>
+                    <ToolTip>Name of the class.</ToolTip>
+                    <Function>ClassName()</Function>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[public static readonly BindableProperty $name$Property
+			= BindableProperty.Create(nameof($name$), typeof($type$), typeof($classname$));
+            
+            public $type$ $name$
+            {
+                get => ($type$)GetValue($name$Property);
+                set => SetValue($name$Property, value);
+            }$end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
