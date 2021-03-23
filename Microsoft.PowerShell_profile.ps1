@@ -10,3 +10,4 @@ if ($host.Name -eq 'ConsoleHost')
 }
 
 Set-Alias -Name code -Value code-insiders.cmd
+Set-Alias -name e -Value explorer
